@@ -212,7 +212,7 @@ nav h1 {
     width: 100%;
     min-height: 100vh;
     background-color: var(--cor-fundo1-);
-    padding-top: 10px;
+    padding-top: 5px;
     display: grid;
     grid-template-columns: 50% 50%;
     text-align: center;
@@ -223,7 +223,7 @@ nav h1 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 5rem;
+    gap: 3rem;
     margin-right: 1rem;
 }
 .texto-terceira h2{
@@ -365,9 +365,6 @@ footer p {
     }
     .titulo{
         font-size: 4rem;
-    }
-    .terceira-parte{
-        grid-template-columns: 1fr;
     }
     .texto-terceira{
         margin: 1.5rem;
