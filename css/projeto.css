@@ -33,6 +33,11 @@ header {
     background-color: var(--cor-fundo2-);
 }
 
+.logo{
+    text-decoration: none;
+    color: inherit;
+}
+
 nav {
     display: flex;
     padding: 5px;

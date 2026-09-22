@@ -31,7 +31,10 @@ body {
 }
 
 /* MENU SUPERIOR */
-
+.logo{
+    text-decoration: none;
+    color: inherit;
+}
 header {
     width: 100%;
     background-color: var(--cor-fundo2-);
