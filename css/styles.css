@@ -4,6 +4,7 @@
     margin: 0;
     padding: 0;
 }
+
 :root {
     --cor-1: #A7A9B0;
     --cor-2: #2D3038;
@@ -18,66 +19,113 @@
     --transicao: 1.5s;
     --margin-base: 10px;
 }
-/* :root {
-    --color-blue: #118Ab2;
-    --color-darkblue: #073B4C;
-    --margin-base: 20px;
-} */
 
 html {
     font-size: 62.5%;
 }
+
 body {
     font-size: 1.6rem;
     background-color: var(--cor-fundo1-);
     color: var(--cor-5);
-
-    height: 100vh;
-    overflow: hidden;
 }
-/* body {
-    font-size: 1.6rem;
-    background-color: var(--cor-fundo1-);
-    color: var(--cor-5);
-} */
+
+/* MENU SUPERIOR */
 
 header {
     width: 100%;
-    height: 250px;
-    overflow: hidden;
+    background-color: var(--cor-fundo2-);
 }
+nav h1 {
+    color: var(--cor-destaque);
+    font-size: 3rem;
+    position: absolute;
+    left: 170px;
+    margin: 0;
+}
+nav {
+    width: 90%;
+    max-width: 1450px;
+    height: 55px;
+    margin: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+.lista-nav {
+    display: flex;
+    list-style-type: none;
+    gap: 2rem;
+    align-items: center;
+}
+
+.lista-nav a {
+    text-decoration: none;
+    color: var(--cor-1);
+    transition: var(--transicao);
+}
+
+.lista-nav a:hover {
+    color: var(--cor-destaque);
+    padding: 0;
+}
+
+
+
+/* SUBMENU */
+
+.lista-menu {
+    height: 55px;
+    display: flex;
+    list-style-type: none;
+    gap: 2rem;
+    align-items: center;
+    background-color: var(--cor-fundo1-);
+    padding: 0 20px;
+}
+
+.lista-menu a {
+    color: var(--cor-5);
+    text-decoration: none;
+    font-weight: 600;
+    transition: var(--transicao);
+}
+
+.lista-menu a:hover {
+    color: var(--cor-hover-);
+    padding: 0;
+}
+
+/* BANNER */
 
 header img {
     width: 100%;
     height: 30vw;
-    max-height: 250px;
+    max-height: 260px;
     object-fit: cover;
     object-position: center;
     display: block;
 }
 
+/* CONTAINER */
+
 .container {
-    width: 75%;
-    max-width: 1200px;
-    height: 60vh;
-    margin:  auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 40px;
-    padding-top: 30px;
-}
-/* .container {
     width: 90%;
     max-width: 1200px;
     min-height: 60vh;
     margin: auto;
+
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 40px;
-} */
+}
 
+/* BOX */
 
 .box {
     width: 50%;
@@ -96,7 +144,7 @@ header img {
 
 .box:nth-child(2) h2 {
     font-size: 5rem;
-    border-left: 5px solid red;
+    border-left: 5px solid var(--cor-destaque);
     padding-left: 15px;
 }
 
@@ -110,27 +158,7 @@ header img {
     color: var(--cor-1);
 }
 
-.box img {
-    width: 60%;
-    border-radius: 7px;
-    display: block;
-}
-
-.cadastro-status {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 30px 0;
-}
-
-.cadastro-status p {
-    width: auto;
-    max-width: none;
-    margin: 0;
-    text-align: center;
-    color: var(--cor-1);
-}
+/* FORMULARIO */
 
 .form {
     width: 100%;
@@ -146,10 +174,12 @@ header img {
     width: 48%;
     height: 80px;
     padding: 0 10px;
+
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
+
     color: var(--cor-5);
 }
 
@@ -168,15 +198,10 @@ select {
     border-radius: 4px;
 }
 
-select {
-    padding-left: 10px;
-}
-
 input:focus,
 select:focus {
     outline: 2px solid var(--cor-destaque);
 }
-
 
 .icon {
     position: absolute;
@@ -185,20 +210,7 @@ select:focus {
     color: var(--cor-destaque-hover);
 }
 
-
-.box-form-radio {
-    display: flex;
-    flex-direction: row;
-    gap: 15px;
-}
-
-.radio {
-    margin-top: 5px;
-    display: flex;
-    align-items: center;
-    gap: 7px;
-}
-
+/* BOTAO */
 
 .box-form-button {
     width: 100%;
@@ -212,10 +224,12 @@ select:focus {
     width: 200px;
     height: 50px;
     margin-top: var(--margin-base);
+
     background-color: var(--cor-destaque);
     color: #fff;
     border: 0;
     border-radius: 5px;
+
     font-size: 1.5rem;
     cursor: pointer;
     transition: 0.2s;
@@ -235,58 +249,96 @@ select:focus {
     transform: scale(1.05);
 }
 
+/* RESPONSIVIDADE */
 
 @media (max-width: 768px) {
 
-    header {
-        height: 200px;
+    nav {
+        width: 90%;
+        height: auto;
+        min-height: 55px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        padding: 10px 0;
+    }
+
+    nav h1 {
+        position: static;
+        font-size: 2.8rem;
+        margin: 0;
+    }
+
+    .lista-nav {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .lista-nav a {
+        font-size: 1.5rem;
+    }
+
+    .lista-menu {
+        height: auto;
+        min-height: 55px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 1.5rem;
+        padding: 10px 20px;
     }
 
     header img {
         height: 200px;
+        object-fit: cover;
     }
 
     .container {
         width: 90%;
+        max-width: 1200px;
         min-height: auto;
-        flex-direction: column;
-        gap: 30px;
-        padding: 30px 0;
-    }
 
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        gap: 30px;
+        padding: 40px 0;
+    }
 
     .box {
         width: 100%;
         min-height: auto;
     }
 
-
     .box h2 {
         font-size: 4.5rem;
         margin: var(--margin-base) 0;
     }
 
-
     .box:nth-child(2) h2 {
         font-size: 3.5rem;
     }
-
 
     .box p {
         width: 100%;
         font-size: 1.7rem;
     }
 
-
-    .box img {
-        width: 70%;
+    .form {
+        width: 100%;
     }
-
 
     .box-form-item {
         width: 48%;
     }
-
 
     .box-form-button .button-link {
         width: 200px;
@@ -297,27 +349,80 @@ select:focus {
 
 @media (max-width: 480px) {
 
-    header {
-        height: 150px;
+    nav {
+        width: 90%;
+        height: auto;
+        min-height: 55px;
+
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        gap: 8px;
+        padding: 10px 0;
+    }
+
+    nav h1 {
+        position: static;
+        font-size: 2.6rem;
+        margin: 0;
+    }
+
+    .lista-nav {
+        width: 100%;
+
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+
+        gap: 0.8rem 1.2rem;
+    }
+
+    .lista-nav a {
+        font-size: 1.4rem;
+    }
+
+    .lista-menu {
+        width: 100%;
+        height: auto;
+        min-height: 55px;
+
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+
+        gap: 1rem 1.5rem;
+        padding: 10px;
+    }
+
+    .lista-menu a {
+        font-size: 1.5rem;
     }
 
     header img {
+        width: 100%;
         height: 150px;
+        object-fit: cover;
     }
-
 
     .container {
         width: 90%;
-        padding: 25px 0;
-        gap: 25px;
-        flex-direction: column;
-    }
 
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        padding: 30px 0;
+        gap: 25px;
+    }
 
     .box {
         width: 100%;
+        min-height: auto;
     }
-
 
     .box h2 {
         font-size: 3.5rem;
@@ -326,13 +431,11 @@ select:focus {
         margin: var(--margin-base) 0;
     }
 
-
     .box:nth-child(2) h2 {
         font-size: 2.8rem;
         border-left: 4px solid var(--cor-destaque);
         padding-left: 12px;
     }
-
 
     .box p {
         width: 100%;
@@ -341,17 +444,13 @@ select:focus {
         margin: var(--margin-base) 0;
     }
 
-
-    .box img {
-        width: 100%;
-    }
-
-
     .form {
         width: 100%;
+
         display: flex;
         flex-direction: column;
         flex-wrap: nowrap;
+
         gap: 10px;
     }
 
@@ -361,11 +460,9 @@ select:focus {
         padding: 0;
     }
 
-
     .box-form-item label {
         font-size: 1.6rem;
     }
-
 
     input,
     select {
@@ -379,9 +476,9 @@ select:focus {
         bottom: 13px;
     }
 
-
     .box-form-button {
         width: 100%;
+
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -390,37 +487,14 @@ select:focus {
         margin-top: var(--margin-base);
     }
 
-
-    .box-form-button button {
-        width: 100%;
-        max-width: 300px;
-        height: 50px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
+    .box-form-button button,
     .box-form-button .button-link {
         width: 100%;
         max-width: 300px;
         height: 50px;
-        margin-top: 10px;
+
         display: flex;
         align-items: center;
         justify-content: center;
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
