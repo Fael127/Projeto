@@ -1,42 +1,111 @@
+
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!-- Bootstrap: antes do CSS personalizado -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+        rel="stylesheet">
+
     <!-- Chamada Google Fonts -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap"
+        rel="stylesheet">
 
-<!-- Chamada CDNJS   -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
+    <!-- Chamada CDNJS -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
 
-<!-- Link com Css -->
-<link rel="stylesheet" href="./css/home.css">
+    <!-- JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 
-<title>Projeto Happy Games</title>
 
+    <!-- Link com CSS -->
+    <link rel="stylesheet" href="./css/home.css">
+
+    <title>Projeto Happy Games</title>
 </head>
+
 <body>
-    <header>
-        <nav>
-            <h1>
-                <a href="index.html" class="logo">Tracker</a>
-            </h1>
-            <ul class="lista-nav">
-                <li><a href="#">Counter-Strike 2</a></li>
-                <li><a href="#">Fortnite</a></li>
-                <li><a href="#">Rocket League</a></li>
-                <li><a href="#">Valorant</a></li>
-                <li><a href="#">League of Legends</a></li>
-                <li><a href="#">Rainbowsix Siege</a></li>
-                <li><a href="#">Warzone</a></li>
+
+
+<header>
+
+    <!-- Menu para celular -->
+    <nav class="navbar navbar-dark  d-lg-none">
+        <div class="container-fluid">
+
+            <button class="navbar-toggler"
+                type="button"
+                data-bs-toggle="offcanvas"
+                data-bs-target="#menuJogos">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <a href="index.html" class="navbar-brand  logo">
+                Tracker
+            </a>
+
+            <a href="./pages/login.html" class="btn-login">
+                Login
+            </a>
+
+        </div>
+    </nav>
+
+    <!-- Menu lateral   de jogos -->
+    <div class="offcanvas offcanvas-start bg-dark text-white"
+        tabindex="-1"
+        id="menuJogos">
+
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title text-danger fs-3">Jogos</h5>
+
+            <button type="button"
+                class="btn-close btn-close-white"
+                data-bs-dismiss="offcanvas">
+            </button>
+        </div>
+
+        <div class="offcanvas-body">
+            <ul class="navbar-nav">
+                <li><a class="nav-link text-white" href="#">Counter-Strike 2</a></li>
+                <li><a class="nav-link text-white" href="#">Fortnite</a></li>
+                <li><a class="nav-link text-white" href="#">Rocket League</a></li>
+                <li><a class="nav-link text-white" href="#">Valorant</a></li>
+                <li><a class="nav-link text-white" href="#">League of Legends</a></li>
+                <li><a class="nav-link text-white" href="#">Rainbowsix Siege</a></li>
+                <li><a class="nav-link text-white" href="#">Warzone</a></li>
             </ul>
-            <!-- Levar Para a página de login, com form e input para simulação de cadastro -->
-            <a href="./pages/login.html" class="btn">Login</a>
-        </nav>
-    </header>
+        </div>
+    </div>
+
+    <!-- Menu para computador -->
+    <nav class="desktop-menu d-none d-lg-flex">
+
+        <h1><a href="index.html" class="logo">Tracker</a></h1>
+
+        <ul class="lista-nav">
+            <li><a href="#">Counter-Strike 2</a></li>
+            <li><a href="#">Fortnite</a></li>
+            <li><a href="#">Rocket League</a></li>
+            <li><a href="#">Valorant</a></li>
+            <li><a href="#">League of Legends</a></li>
+            <li><a href="#">Rainbowsix Siege</a></li>
+            <li><a href="#">Warzone</a></li>
+        </ul>
+
+        <a href="./pages/login.html" class="btn-login">Login</a>
+
+    </nav>
+
+</header>
+
+
     <section class="sub-menu">
         <ul class="lista-menu">
             <li><a href="#">Home</a></li>
@@ -44,78 +113,106 @@
             <li><a href="pages/projeto.html">Projeto</a></li>
         </ul>
     </section>
-    <!-- Corpo Inteiro -->
+
+<!-- Corpo Inteiro -->
     <main>
-        <section class="back-relative">
-        <div>
-        <h1 class="titulo z-index">VEJA SUAS <span>ESTATISTÍCAS</span> A QUALQUER HORA</h1>
-        <h4 class="z-index">O melhor tracker em desenvolvimento da FIAP, rastreie e reveja seus insights, partidas e highlights a qualquer momento</h4>
-        </div>
+        <section class="back-relative container-fluid py-5">
+            <div class="container">
+                <div class="row justify-content-center text-center">
+                    <div class="col-12 col-lg-10">
+                        <h1 class="titulo z-index">VEJA SUAS <span>ESTATISTÍCAS</span> A QUALQUER HORA</h1>
+                            <h4 class="z-index">O melhor tracker em desenvolvimento da FIAP, rastreie e reveja seus insights, partidas e highlights a qualquer momento</h4>
+            </div>
+                </div>
+                    </div>
         <div class="background"></div>
-        <form action="" class="z-index login-home">
-            <fieldset class="z-index">
-                <label for="SteamID"></label>
-                <input for="text" placeholder="Coloque Steam ID, URL ou Nome do Perfil" class="z-index">
-                <button>Checar Estatistícas</button>
+        <form action="" id="steam-search-form" class="z-index login-home container py-3">
+            <div class="row justify-content-center">
+                
+<form action="" id="steam-search-form" class="login-home container-fluid">
+    <div class="row justify-content-center">
+        <div class="col-12 col-md-9 col-lg-7">
+            <fieldset class="d-flex flex-column flex-sm-row gap-3 align-items-stretch">
+                <label for="steam-profile" class="visually-hidden">
+                    Steam ID, URL ou nome do perfil
+                </label>
+
+                <input
+                    type="text"
+                    id="steam-profile"
+                    name="steam-profile"
+                    placeholder="Coloque Steam ID, URL ou Nome do Perfil"
+                    class="form-control"
+                >
+
+                <button type="submit" class="btn btn-primary">
+                    Checar Estatísticas
+                </button>
             </fieldset>
-        </form>
+        </div>
+    </div>
+</form>
+
         </section>
-        <section class="informacoes">
-            <ul class="items">
-            <li>
+        <section class="informacoes py-5">
+            <div class="container"><ul class="items row g-4 px-0">
+            <li class="col-12 col-md-4">
                 <i class="fa-solid fa-users"></i>
                 <h3>Players</h3>
                 <p>Estima-se que 3.6 bilhões de pessoas joguem qualquer tipo de jogo virtual anualmente <sup>[1]</sup></p>
                 </li>
-            <li>
+            <li class="col-12 col-md-4">
                 <i class="fa-solid fa-gamepad"></i>
                 <h3>Plataformas</h3>
                 <p>Somente na plataforma mobile contamos com mais de 3 bilhões de jogadores ativos, contendo um market share de 55% e uma receita anual estimada de $103 bilhões de doláres <sup>[1]</sup></p>
             </li>
-            <li>
+            <li class="col-12 col-md-4">
                 <i class="fa-solid fa-person"></i>
                 <h3>Faixa Etária</h3>
                 <p>Em 2025 a faixa etária predominante em jogos, surpreendentemente, foi a de 50+, alcançando a incrível marca de 30% do público gamer <sup>[1]</sup></p>
             </li>
-            </ul>
+            </ul></div>
         </section>
-        <section class="terceira-parte">
-            <div class="imagem">
+        <section class="terceira-parte py-5">
+            <div class="container-fluid px-lg-5">
+            <div class="row g-0 align-items-center">
+            <div class="imagem col-12 col-lg-5 p-4">
                 <img src="./assets/images/pexels-eren-li-7241439.jpg" alt="jovem adulto jogando counter-strike no computador, foto tirada pelas costas">
             </div>
-            <div class="texto-terceira">
+            <div class="texto-terceira col-12 col-lg-7 p-4 p-lg-5">
             <h2>Mais do que apenas um tracker?</h2>
             <p>Quem nunca quis saber mais sobre seu histórico dentro de algum jogo? Pesquisar partidas, rever jogadas, acompanhar seu desempenho e, principalmente, ter um lugar para compartilhar seus melhores momentos?</p>
 <p>Apresentamos hoje uma plataforma pensada não apenas para o player casual, que gostaria de consultar seu histórico, rever partidas e compartilhar suas jogadas, mas também para o player competitivo — o famoso tryhard — que busca melhorar constantemente, conquistar reconhecimento e ganhar visibilidade dentro da comunidade.</p>
 <p>A proposta é oferecer um espaço onde cada jogador possa registrar sua trajetória, acompanhar sua evolução e mostrar suas habilidades de forma clara e organizada. Mais do que apenas visualizar estatísticas, queremos criar uma comunidade onde boas jogadas, dedicação e desempenho possam ser reconhecidos.</p>
 <p>Seja você um player casual ou competitivo, nosso objetivo é proporcionar um espaço onde suas conquistas tenham visibilidade e onde cada jogador possa encontrar seu próprio destaque.</p>
             </div>
+            </div></div>
         </section>
     </main>
     <!-- Final do CORPO -->
 
-<!-- Rodapé -->
+    <!-- Rodapé -->
+    <footer>
+        <h3>Todos os direitos reservados</h3>
 
-<footer>
-    <h3>Todos os direitos reservados</h3>
+        <div class="fontes">
+            Fonte:
 
-    <div class="fontes">
-        Fonte:
-        <a href="https://icon-era.com/statistics/video-game-statistics/" target="_blank">IconEra</a>
-        <sup>[1]</sup>
+            <a href="https://icon-era.com/statistics/video-game-statistics/"
+            target="_blank" rel="noopener noreferrer">IconEra</a>
+            <sup>[1]</sup>
 
-        <a href="https://www.pexels.com/pt-br/" target="_blank">Pexels</a>
-        <sup>[2]</sup>
-    </div>
+            <a href="https://www.pexels.com/pt-br/"
+            target="_blank" rel="noopener noreferrer">Pexels</a>
+            <sup>[2]</sup>
+        </div>
 
-    <p>Desenvolvido por: Felipe Ercego, Rafael Silva e Thales Ribeiro</p>
-    <p>
-            Projeto Happy Game - 2026
-    </p>
+        <p>Desenvolvido por: Felipe Ercego, Rafael Silva e Thales Ribeiro</p>
 
-</footer>
+        <p>Projeto Happy Game - 2026</p>
+    </footer>
 
-
-    <!-- Fim do Rodapé -->
+    <!-- JavaScript do Bootstrap -->
+    <script src="./js/script.js" defer></script>
 </body>
 </html>
