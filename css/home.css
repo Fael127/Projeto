@@ -324,7 +324,7 @@ SEGUNDA SEÇÃO
 .items {
     display: flex;
     justify-content: space-around;
-    width: 100%;
+    width: auto;
     text-align: center;
     list-style: none;
     padding-left: 0;
@@ -355,14 +355,7 @@ sup {
 TERCEIRA SEÇÃO
 ========================= */
 
-/*
-O Bootstrap controla as colunas com:
-row g-0
-col-12 col-lg-6
 
-desktop: duas colunas de 50%.
-celular: uma coluna por linha.
-*/
 
 .terceira-parte {
     width: 100%;
@@ -553,7 +546,76 @@ TABLETS
         font-size: 1.7rem;
         line-height: 2.7rem;
     }
+      /* SEGUNDA SEÇÃO */
+    .informacoes {
+        width: 100%;
+        padding-left: 0;
+        padding-right: 0;
+    }
 
+    .informacoes .container {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .informacoes .items {
+        width: auto;
+        margin-bottom: 0;
+    }
+
+    .informacoes .items li {
+        text-align: center;
+    }
+
+    /* TERCEIRA SEÇÃO */
+    .terceira-parte {
+        width: 100%;
+        overflow-x: clip;
+    }
+
+    .terceira-parte .container-fluid {
+        width: 100%;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .terceira-parte .row {
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .terceira-parte .imagem {
+        width: 100%;
+        padding: 1.5rem ;
+    }
+
+    .terceira-parte .imagem img {
+        display: block;
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+    }
+
+    .terceira-parte .texto-terceira {
+        width: 100%;
+        margin: 0;
+        padding: 2rem 2.5rem ;
+        align-items: center;
+        text-align: center;
+    }
+
+    .terceira-parte .texto-terceira h2 {
+        max-width: 100%;
+        font-size: 3.2rem;
+    }
+
+    .terceira-parte .texto-terceira p {
+        width: 100%;
+        max-width: 100%;
+        overflow-wrap: break-word;
+        line-height: 1.7;
+    }
 
     /* HOME */
 
@@ -567,11 +629,6 @@ TABLETS
     }
 }
 
-
-/* =========================
-   AJUSTES MÍNIMOS PARA
-   A RESPONSIVIDADE COM BOOTSTRAP
-========================= */
 
 @media (max-width: 700px) {
 
@@ -614,9 +671,6 @@ TABLETS
         overflow-wrap: break-word;
     }
 }
-
-
-
 
 
 /* Menu responsivo */
